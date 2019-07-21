@@ -51,6 +51,25 @@
                     $("#btn1").show();
                 });
 
+                //Beispiel 3
+
+                $("#btn3").click(function () {
+                    $.get("https://jsonplaceholder.typicode.com/posts", function (data, status) {
+
+                        if (status === "success" && Array.isArray(data)) {
+
+                            for (var i in data) {
+                                if (data[i].id === 3) {
+                                    $("#POST").text(JSON.stringify(data[i]));
+                                    break;
+                                }
+                            }
+                        } else {
+                            alert("Houston we have a problem!");
+                        }
+                    });
+                }); 
+
 
             });
         </script>
@@ -73,6 +92,7 @@
             Anzeige der Posts: <div id="POST"></div>
             ---------
             <p><button id="btn1">Set Yellow</button><button id="btn2">Drop Yellow</button></p>
+            <p><button id="btn3">Call REST-API</button></p>
             
         </div>
     </body>
