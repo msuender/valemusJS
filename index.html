@@ -35,6 +35,22 @@
 
                 $("#UMSATZ").text(calcUmsatz("#ANZAHL",".PREIS"));
 
+                //Beispiel 2
+
+                $("#btn2").hide();
+
+                $("#btn1").click(function(){
+                    $("#UMSATZ").css("background-color", "yellow");
+                    $("#btn1").hide();
+                    $("#btn2").show();
+                });
+
+                $("#btn2").click(function(){
+                    $("#UMSATZ").css("background-color", "transparent");
+                    $("#btn2").hide();
+                    $("#btn1").show();
+                });
+
 
             });
         </script>
@@ -56,6 +72,8 @@
             <div>REST-API: https://jsonplaceholder.typicode.com/posts</div>
             Anzeige der Posts: <div id="POST"></div>
             ---------
+            <p><button id="btn1">Set Yellow</button><button id="btn2">Drop Yellow</button></p>
+            
         </div>
     </body>
 </html>
