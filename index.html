@@ -23,6 +23,19 @@
                 obj2.b.bb = 2;             
 
                 console.log(obj1.b.bb);
+
+                //Beispiel 1
+
+                function calcUmsatz (qty, price) {
+
+                    let anzahl = $(qty).text();
+                    let preis = $(price).text();
+                    return (anzahl * preis);
+                } 
+
+                $("#UMSATZ").text(calcUmsatz("#ANZAHL",".PREIS"));
+
+
             });
         </script>
     </head>
