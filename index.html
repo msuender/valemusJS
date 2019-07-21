@@ -70,6 +70,20 @@
                     });
                 }); 
 
+                //Beispiel 4
+
+                $("#btn4").click(function () {
+
+                    for (var u in search) {
+
+                        if (search[u].c === "EL3") {
+                            search[u].b = 99;
+                            $("#EL3").text(JSON.stringify(search[u]));
+                            break;
+                        }
+                    }
+                }); 
+
 
             });
         </script>
@@ -90,9 +104,12 @@
             <br>---------<br>
             <div>REST-API: https://jsonplaceholder.typicode.com/posts</div>
             Anzeige der Posts: <div id="POST"></div>
+            <div>Suche EL3</div>
+            EL3: <div id="EL3"></div>
             ---------
             <p><button id="btn1">Set Yellow</button><button id="btn2">Drop Yellow</button></p>
             <p><button id="btn3">Call REST-API</button></p>
+            <p><button id="btn4">Find EL3</button></p>
             
         </div>
     </body>
