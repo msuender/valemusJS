@@ -94,7 +94,8 @@
             Aufgabe 2: Färben Sie das DIV-Element mit der ID "UMSATZ" gelb ein.
             Aufgabe 3: Greifen Sie auf die untenstehende REST-API zu und listen Sie den 3. Post im Feld mit der ID "POST" auf.
             Aufgabe 4: Suchen Sie aus dem Array "search" das Objekt über das Attribut "c", bei welchem das Attribut "c" == 'EL3' ist und setzen Sie das Attribut "b" auf 99<br>
-            Aufgabe 5: Obwohl das Objekt obj1 mit Object.assign kopiert wurde und ein neues obj2-Objekt entstanden ist, ist der Wert von obj1.b.bb = 2 und nicht 1. Warum?
+            Aufgabe 5: Obwohl das Objekt obj1 mit Object.assign kopiert wurde und ein neues obj2-Objekt entstanden ist, ist der Wert von obj1.b.bb = 2 und nicht 1. Warum?<br>
+            Antwort: das musste ich nachschauen. tiefes Klonen ist mit Object.assign nicht möglich, nur die Referenz wird kopiert (siehe auch) <a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Warnung_bei_tiefem_Clonen" target="_blank">hier</a>
             <br><br>
             ---------
             <br>
